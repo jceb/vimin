@@ -11,38 +11,20 @@ git clone https://github.com/jceb/vimin.git ~/.vim
 # git clone https://github.com/jceb/vimin.git ~/.config/nvim
 ```
 
-Initialize all submodules:
+Initialize submodules and helptags by running the update script:
 
 ```bash
-git submodule update --init --recursive
-```
-
-Generate helptags:
-
-```bash
-vim -c :Helptags
+./update
 ```
 
 Now you're good to go.  Start hacking.
 
 ## Update
 
-Update vimin:
+Pull in the latest changes by running the update script again:
 
 ```bash
-git pull
-```
-
-Update submodules:
-
-```bash
-git submodule update --init --recursive
-```
-
-Update helptags:
-
-```bash
-vim -c :Helptags
+./update
 ```
 
 ## Customization
