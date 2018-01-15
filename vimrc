@@ -1,10 +1,12 @@
 " put any pre configuration settings in this file {{{1
 runtime! vimrc-local-pre
 
-" initialize pathogen / runtimepath {{{1
-call map(minptg#findsubdir(&runtimepath, "pathogen"), "minptg#addtortp(v:val)")
+" load plugins {{{1
+if !exists('&packpath')
+    call map(minptg#findsubdir(&runtimepath, "pathogen"), "minptg#addtortp(v:val)")
 
-execute pathogen#infect()
+    execute pathogen#infect()
+endif
 
 " settings {{{1
 
