@@ -7,6 +7,8 @@ SSH into the remote server and clone the vimin repository:
 
 ```bash
 git clone https://github.com/jceb/vimin.git ~/.vim
+# or respectively for neovim use
+# git clone https://github.com/jceb/vimin.git ~/.config/nvim
 ```
 
 Initialize all submodules:
@@ -15,7 +17,7 @@ Initialize all submodules:
 git submodule update --init --recursive
 ```
 
-Generate helptags for submodules:
+Generate helptags:
 
 ```bash
 vim -c :Helptags
@@ -37,7 +39,7 @@ Update submodules:
 git submodule update --init --recursive
 ```
 
-Update helptags for submodules:
+Update helptags:
 
 ```bash
 vim -c :Helptags
