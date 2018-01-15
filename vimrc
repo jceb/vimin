@@ -16,6 +16,9 @@ if has('virtualedit')
     set virtualedit=block,onemore
 endif
 set copyindent
+if !isdirectory($HOME."/.local/share/vim/swap")
+    call mkdir($HOME."/.local/share/vim/swap", 'p')
+endif
 set directory=~/.local/share/vim/swap//
 set gdefault
 set hidden
