@@ -20,6 +20,7 @@ if has('virtualedit')
 endif
 set splitright
 set splitbelow
+set ignorecase
 
 " dirvish {{{2
 let g:dirvish_mode = ':sort ,^.*[\/],'
