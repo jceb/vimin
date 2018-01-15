@@ -18,9 +18,15 @@ endif
 if has('virtualedit')
     set virtualedit=block,onemore
 endif
-set splitright
-set splitbelow
+set copyindent
+set directory=~/.local/share/vim/swap//
+set gdefault
+set hidden
 set ignorecase
+set nofoldenable
+set pastetoggle=<F11>
+set splitbelow
+set splitright
 
 " dirvish {{{2
 let g:dirvish_mode = ':sort ,^.*[\/],'
