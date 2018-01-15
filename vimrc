@@ -13,6 +13,11 @@ set number
 if exists('&relativenumber')
     set relativenumber
 endif
+if has('virtualedit')
+    set virtualedit=block,onemore
+endif
+set splitright
+set splitbelow
 
 " dirvish {{{2
 let g:dirvish_mode = ':sort ,^.*[\/],'
