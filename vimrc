@@ -1,6 +1,3 @@
-" put any pre configuration settings in this file {{{1
-runtime! vimrc-local-pre
-
 " load plugins {{{1
 if !exists('&packpath')
     call map(minptg#findsubdir(&runtimepath, "pathogen"), "minptg#addtortp(v:val)")
@@ -30,6 +27,3 @@ set splitright
 
 " dirvish {{{2
 let g:dirvish_mode = ':sort ,^.*[\/],'
-
-" put any other local configuration settings in this file {{{1
-runtime! vimrc-local
