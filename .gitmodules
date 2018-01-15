@@ -1,5 +1,5 @@
 [submodule "bundle/sensible"]
-	path = pack/plugins/bundle/sensible
+	path = pack/plugins/start/sensible
 	url = https://github.com/tpope/vim-sensible.git
 [submodule "pathogen"]
 	path = pathogen

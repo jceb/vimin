@@ -1,5 +1,5 @@
 function! Split(path) abort
-    if type(a:path) != v:t_string
+    if type(a:path) != type("")
         return []
     endif
     return split(a:path, ',')
@@ -9,20 +9,21 @@ function! Dirsep() abort
     return !exists("+shellslash") || &shellslash ? '/' : '\'
 endfunction
 
-function! IsSubDir(subdir) abort
-    function! Filter(key, value) abort closure
-        return isdirectory(join([a:value, a:subdir], Dirsep()))
-    endfunction
-    return funcref("Filter")
+function! IsSubDir(path, subdir) abort
+    return isdirectory(join([a:path, a:subdir], Dirsep()))
+endfunction
+
+function! JoinPath(path, subdir)
+    return fnameescape(join([a:path, a:subdir], Dirsep()))
 endfunction
 
 function! FindSubDirInPath(path, subdir) abort
-    return map(filter(Split(a:path), IsSubDir(a:subdir)), {key, value -> join([value, a:subdir], Dirsep())})
+    return map(filter(Split(a:path), "IsSubDir(v:val, a:subdir)"), "JoinPath(v:val, a:subdir)")
 endfunction
 
-set runtimepath+=join(FindSubDirInPath(&runtimepath, "pathogen"), ',')
+execute "set runtimepath+=".join(FindSubDirInPath(&runtimepath, "pathogen"), ',')
 
 execute pathogen#infect()
 
-" put any local configuration in here
-runtime! local-vimrc
+" put any local configuration in this file
+runtime! vimrc-local
