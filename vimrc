@@ -1,10 +1,21 @@
-" put any pre configuration settings in this file
+" put any pre configuration settings in this file {{{1
 runtime! vimrc-local-pre
 
-" initialize pathogen / runtimepath
+" initialize pathogen / runtimepath {{{1
 call map(minptg#findsubdir(&runtimepath, "pathogen"), "minptg#addtortp(v:val)")
 
 execute pathogen#infect()
 
-" put any other local configuration settings in this file
+" settings {{{1
+
+" general {{{2
+set number
+if exists('&relativenumber')
+    set relativenumber
+endif
+
+" dirvish {{{2
+let g:dirvish_mode = ':sort ,^.*[\/],'
+
+" put any other local configuration settings in this file {{{1
 runtime! vimrc-local
