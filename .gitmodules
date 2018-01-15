@@ -19,3 +19,6 @@
 [submodule "pack/plugins/start/dirvish"]
 	path = pack/plugins/start/dirvish
 	url = https://github.com/justinmk/vim-dirvish.git
+[submodule "pack/plugins/start/commentary"]
+	path = pack/plugins/start/commentary
+	url = https://github.com/tpope/vim-commentary.git
