@@ -47,6 +47,8 @@ vim -c :Helptags
 
 ## Plugins
 
+The following plugins are part of the vimin distribution:
+
 - [commentary](https://github.com/tpope/vim-commentary): handle comments with the `gc` mapping
 - [dirvish](https://github.com/tpope/vim-unimpaired): file management in vim, start by pressing `-`
 - [eunuch](https://github.com/tpope/vim-eunuch): Unix commands in vim
