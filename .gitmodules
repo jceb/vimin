@@ -22,3 +22,9 @@
 [submodule "pack/plugins/start/commentary"]
 	path = pack/plugins/start/commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "pack/plugins/start/starrange"]
+	path = pack/plugins/start/starrange
+	url = https://github.com/vim-scripts/StarRange.git
+[submodule "pack/plugins/start/surround"]
+	path = pack/plugins/start/surround
+	url = https://github.com/tpope/vim-surround.git

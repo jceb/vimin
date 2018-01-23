@@ -47,5 +47,9 @@ The following plugins are part of the vimin distribution:
   `pack/plugins/start/` directory
 - [rsi](https://github.com/tpope/vim-rsi): readline mappings in vim
 - [sensible](https://github.com/tpope/vim-sensible): very good default settings
+- [starrange](https://github.com/vim-scripts/StarRange): search string selection
+  in visual mode
+- [surround](https://github.com/tpope/vim-surround.git): surround text with
+  parantheses and other characters
 - [unimpaired](https://github.com/tpope/vim-unimpaired): mappings for toggling
   options, moving text, and navigating buffers
