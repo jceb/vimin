@@ -3,5 +3,5 @@ set -e
 cd "$(dirname "$0")"
 git pull --rebase
 git submodule update --init --recursive
-vim -c ':Helptags|q'
+vim -c ':helptags ALL|q'
 echo 'Update finished'
