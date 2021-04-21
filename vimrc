@@ -63,10 +63,9 @@ let g:lightline = {
             \ },
             \ 'component_function': {
             \   'fugitive': 'LightLineFugitive',
-            \   'neomake': 'LightLineNeomake'
             \ },
             \ 'active' : {
-            \ 'left': [ [ 'winnr', 'neomake', 'mode', 'paste' ],
+            \ 'left': [ [ 'winnr', 'mode', 'paste' ],
             \           [ 'bomb', 'diff', 'scrollbind', 'noeol', 'readonly', 'fugitive', 'filename', 'modified' ] ],
             \ 'right': [ [ 'lineinfo' ],
             \            [ 'percent' ],
