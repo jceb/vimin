@@ -58,3 +58,9 @@
 [submodule "pack/plugins/start/tcomment"]
 	path = pack/plugins/start/tcomment
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "pack/colorschemes/start/nord"]
+	path = pack/colorschemes/start/nord
+	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule "pack/plugins/start/lightline"]
+	path = pack/plugins/start/lightline
+	url = https://github.com/itchyny/lightline.vim.git
