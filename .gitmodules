@@ -32,11 +32,11 @@
 	path = pack/plugins/start/repeat
 	url = https://github.com/tpope/vim-repeat.git
 [submodule "pack/ftplugins/svelte"]
-	path = pack/ftplugins/svelte
+	path = pack/ftplugins/start/svelte
 	url = https://github.com/leafOfTree/vim-svelte-plugin.git
 [submodule "pack/ftplugins/markdown"]
-	path = pack/ftplugins/markdown
+	path = pack/ftplugins/start/markdown
 	url = https://github.com/tpope/vim-markdown.git
 [submodule "pack/ftplugins/plantuml"]
-	path = pack/ftplugins/plantuml
+	path = pack/ftplugins/start/plantuml
 	url = https://github.com/aklt/plantuml-syntax.git
