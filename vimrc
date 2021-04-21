@@ -29,7 +29,6 @@ colorscheme nord
 let g:dirvish_mode = ':sort ,^.*[\/],'
 
 " ftplugin: svelte {{{2
-
 function! OnChangeSvelteSubtype(subtype)
   echo 'Subtype is '.a:subtype
   if empty(a:subtype) || a:subtype == 'html'
