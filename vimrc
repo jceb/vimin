@@ -21,5 +21,22 @@ set pastetoggle=<F11>
 set splitbelow
 set splitright
 
+" plugins {{{1
+
 " dirvish {{{2
 let g:dirvish_mode = ':sort ,^.*[\/],'
+
+" ftplugin: svelte {{{2
+
+function! OnChangeSvelteSubtype(subtype)
+  echo 'Subtype is '.a:subtype
+  if empty(a:subtype) || a:subtype == 'html'
+    setlocal commentstring=<!--%s-->
+    setlocal comments=s:<!--,m:\ \ \ \ ,e:-->
+  elseif a:subtype =~ 'css'
+    setlocal comments=s1:/*,mb:*,ex:*/ commentstring&
+  else
+    setlocal commentstring=//%s
+    setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+  endif
+endfunction
