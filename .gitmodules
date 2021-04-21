@@ -19,9 +19,6 @@
 [submodule "pack/plugins/start/dirvish"]
 	path = pack/plugins/start/dirvish
 	url = https://github.com/justinmk/vim-dirvish.git
-[submodule "pack/plugins/start/commentary"]
-	path = pack/plugins/start/commentary
-	url = https://github.com/tpope/vim-commentary.git
 [submodule "pack/plugins/start/starrange"]
 	path = pack/plugins/start/starrange
 	url = https://github.com/vim-scripts/StarRange.git
@@ -40,3 +37,27 @@
 [submodule "pack/ftplugins/plantuml"]
 	path = pack/ftplugins/start/plantuml
 	url = https://github.com/aklt/plantuml-syntax.git
+[submodule "pack/plugins/start/auto-pairs"]
+	path = pack/plugins/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "pack/plugins/start/editorconfig"]
+	path = pack/plugins/start/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "pack/plugins/start/fugitive"]
+	path = pack/plugins/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/plugins/start/jumpy"]
+	path = pack/plugins/start/jumpy
+	url = https://github.com/arp242/jumpy.vim.git
+[submodule "pack/plugins/start/lastpos"]
+	path = pack/plugins/start/lastpos
+	url = https://github.com/vim-scripts/lastpos.vim.git
+[submodule "pack/plugins/start/Lite-Tab-Page"]
+	path = pack/plugins/start/Lite-Tab-Page
+	url = https://github.com/jceb/Lite-Tab-Page.git
+[submodule "pack/plugins/start/matchup"]
+	path = pack/plugins/start/matchup
+	url = https://github.com/andymass/vim-matchup.git
+[submodule "pack/plugins/start/tcomment"]
+	path = pack/plugins/start/tcomment
+	url = https://github.com/tomtom/tcomment_vim.git
