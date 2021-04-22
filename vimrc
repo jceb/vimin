@@ -1,5 +1,4 @@
 " settings {{{1
-
 " Global Settings: {{{2
 " ----------------
 
@@ -120,9 +119,102 @@ set iskeyword+=_             " these characters also belong to a word
 "set matchpairs+=<:>          " angle brackets should also being matched by %
 set complete+=i              " scan included files and dictionary (if spell checking is enabled)
 
-
+" Colorscheme {{{2
 
 colorscheme nord
+
+" keybindings {{{2
+
+" fix Y
+nnoremap Y y$
+
+" select last paste visually
+nnoremap gV `]v`[
+
+" format paragraphs quickly
+nnoremap Q gwip
+xnoremap Q gw
+
+" use space key for something useful
+nnoremap <Space>1 1<C-w>w
+nnoremap <Space>2 2<C-w>w
+nnoremap <Space>3 3<C-w>w
+nnoremap <Space>4 4<C-w>w
+nnoremap <Space>5 5<C-w>w
+nnoremap <Space>6 6<C-w>w
+nnoremap <Space>7 7<C-w>w
+nnoremap <Space>8 8<C-w>w
+nnoremap <Space>9 9<C-w>w
+nnoremap <Space><Space> <cmd>update<CR>
+nnoremap <Space>bW <cmd>bw #<CR>
+nnoremap <Space>bw <cmd>bw<CR>
+nnoremap <Space>CM "*P
+nnoremap <Space>cM "*P
+nnoremap <Space>cm "*p
+nnoremap <Space>CV "+P
+nnoremap <Space>cV "+P
+nnoremap <Space>cv "+p
+nnoremap <Space>D <cmd>bd<CR>
+nnoremap <Space>d <cmd>close<CR>
+nnoremap <Space>e :<C-u>e %/
+nnoremap <Space>E <cmd>e<CR>
+nnoremap <Space>fc :<C-u>e ~/.config/
+nnoremap <Space>fd <cmd>Mkdir %/
+nnoremap <Space>fe :<C-u>e %/
+nnoremap <Space>fm :<C-u>Move %
+nnoremap <Space>fs <cmd>w<CR>
+nnoremap <Space>fu :<C-u>e ~/
+nnoremap <Space>gB <cmd>Git blame<CR>
+nnoremap <Space>gC <cmd>Git commit -s<CR>
+nnoremap <Space>gc <cmd>Git commit -s<CR>
+nnoremap <Space>GD <cmd>Gdiffsplit! HEAD<CR>
+nnoremap <Space>gD <cmd>Gdiffsplit! HEAD<CR>
+nnoremap <Space>gd <cmd>Gdiffsplit!<CR>
+nnoremap <Space>ge <cmd>Gedit<CR>
+nnoremap <Space>gl <cmd>0Gclog<CR>
+nnoremap <Space>gL <cmd>Gclog<CR>
+nnoremap <Space>gm :<C-u>GMove 
+nnoremap <Space>gP :<C-u>Git push 
+nnoremap <Space>gp <cmd>Git push<CR>
+nnoremap <Space>gs <cmd>Git<CR>
+nnoremap <Space>gU :<C-u>git pull 
+nnoremap <Space>gu <cmd>Git pre<CR>
+nnoremap <Space>gw <cmd>Gwrite<CR>
+nnoremap <Space>H <C-w>H
+nnoremap <Space>h <C-w>h
+nnoremap <Space>J <C-w>J
+nnoremap <Space>j <C-w>j
+nnoremap <Space>K <C-w>K
+nnoremap <Space>k <C-w>k
+nnoremap <Space>L <C-w>L
+nnoremap <Space>l <C-w>l
+nnoremap <Space>o <C-w>p<CR>
+nnoremap <Space>pc <cmd>Dirvish ~/.config<CR>
+nnoremap <Space>pp <cmd>pwd<CR>
+nnoremap <Space>pv <cmd>Dirvish ~/.config/nvim<CR>
+nnoremap <Space>qq <cmd>qa<CR>
+nnoremap <Space>R <cmd>e!<CR>
+nnoremap <Space>SS :<C-u>Obsession ~/.sessions/
+nnoremap <Space>ss :<C-u>so ~/.sessions/
+nnoremap <Space>te <cmd>tabe<CR>
+nnoremap <Space>tn <cmd>tabnew<CR>
+nnoremap <Space>tr <cmd>call neoterm#repl#term(b:neoterm_id)<CR>
+nnoremap <Space>TS <cmd>split +call\ TnewHere()<CR>
+nnoremap <Space>tS <cmd>split +call\ TnewHere()<CR>
+nnoremap <Space>ts <cmd>split +Tnew<CR>
+nnoremap <Space>TT <cmd>tabe +call\ TnewHere()<CR>
+nnoremap <Space>tT <cmd>tabe +call\ TnewHere()<CR>
+nnoremap <Space>tt <cmd>tabe +Tnew<CR>
+nnoremap <Space>TV <cmd>vsplit +call\ TnewHere()<CR>
+nnoremap <Space>tV <cmd>vsplit +call\ TnewHere()<CR>
+nnoremap <Space>tv <cmd>vsplit +Tnew<CR>
+nnoremap <Space>w <C-w>
+nnoremap <Space>wd <C-w>c
+nnoremap <Space>we <cmd>vnew<CR>
+nnoremap <Space>wS <cmd>new<CR>
+nnoremap <Space>wt <cmd>tabe %<CR>
+nnoremap <Space>wV <cmd>vnew<CR>
+nnoremap <Space>x <cmd>x<CR>
 
 " plugins {{{1
 
@@ -173,7 +265,7 @@ function! OnChangeSvelteSubtype(subtype)
   endif
 endfunction
 
-" Fugitive {{{1
+" Fugitive {{{2
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " lightline {{{2
@@ -220,7 +312,8 @@ function! LightLineFugitive()
     return ''
 endfunction
 
-" rsi {{{1
+" rsi {{{2
 let g:rsi_no_meta = 1
 
+" vi {{{1
 " vi: ft=vim:tw=80:sw=4:ts=4:sts=4:et:fdm=marker
