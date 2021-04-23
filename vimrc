@@ -80,7 +80,7 @@ set showtabline=2              " always show tabline, even if there is just one 
 set colorcolumn=+1             " color specified column in order to help respecting line widths
 set termguicolors              " true color for the terminal
 set number relativenumber      " show linenumbers
-set signcolumn=number          " display signs in number column
+" set signcolumn=number          " display signs in number column
 set completeopt=menuone,preview,noinsert,noselect  " show the complete menu even if there is just one entry
 set splitright                 " put the new window right of the current one
 set splitbelow                 " put the new window below the current one
@@ -89,7 +89,8 @@ if $LANG =~ '.*\.UTF-8$' || $LANG =~ '.*utf8$' || $LANG =~ '.*utf-8$'
 	set listchars=tab:»\ ,trail:·,nbsp:␣ " list nonprintable characters
 	set showbreak=↪\           " identifier put in front of wrapped lines
 endif
-set fillchars=vert:\ ,diff:·,fold:·,eob:│   " get rid of the gab between the vertical bars
+set fillchars=vert:\ ,diff:·,fold:·   " get rid of the gab between the vertical bars
+" set fillchars=vert:\ ,diff:·,fold:·,eob:│   " get rid of the gab between the vertical bars
 set scrolloff=3                " always show context at top and bottom
 set guioptions=aegimtc         " disable scrollbars
 set cpoptions=aABceFsq         " q: When joining multiple lines leave the cursor at the position where it would be when joining two lines.
@@ -97,7 +98,9 @@ set cpoptions=aABceFsq         " q: When joining multiple lines leave the cursor
                                " v: Backspaced characters remain visible on the screen in Insert mode.
                                " J: a sentence is followed by two spaces
 " set synmaxcol=200              " stop syntax highlighting at a certain column to improve speed
+if has("nvim")
 set inccommand=split           " preview changes of substitute commands in a separate window
+endif
 set report=0                   " report every changed line
 
 " Text Settings: {{{2
