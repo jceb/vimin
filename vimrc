@@ -178,7 +178,7 @@ nnoremap <Space>gP :<C-u>Git push
 nnoremap <Space>gp <cmd>Git push<CR>
 nnoremap <Space>gs <cmd>Git<CR>
 nnoremap <Space>gU :<C-u>git pull 
-nnoremap <Space>gu <cmd>Git pre<CR>
+nnoremap <Space>gu <cmd>Git pull --rebase --prune<CR>
 nnoremap <Space>gw <cmd>Gwrite<CR>
 nnoremap <Space>H <C-w>H
 nnoremap <Space>h <C-w>h
