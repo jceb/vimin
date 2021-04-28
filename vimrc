@@ -157,8 +157,8 @@ nnoremap <Space>cm "*p
 nnoremap <Space>CV "+P
 nnoremap <Space>cV "+P
 nnoremap <Space>cv "+p
-nnoremap <Space>D <cmd>bd<CR>
-nnoremap <Space>d <cmd>close<CR>
+nnoremap <Space>D <cmd>bw<CR>
+nnoremap <Space>d <cmd>bd<CR>
 nnoremap <Space>e :<C-u>e %/
 nnoremap <Space>E <cmd>e<CR>
 nnoremap <Space>fc :<C-u>e ~/.config/
