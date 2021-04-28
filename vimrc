@@ -219,6 +219,54 @@ nnoremap <Space>wt <cmd>tabe %<CR>
 nnoremap <Space>wV <cmd>vnew<CR>
 nnoremap <Space>x <cmd>x<CR>
 
+" keybindings {{{1
+" make S behave like C
+nnoremap S s$
+
+" replace within the visual selection
+xnoremap s :<C-u>%s/\%V
+" use the same exit key for vim that's also configured in the terminal
+inoremap <C-\><C-\> <Esc>
+inoremap  <Esc>
+inoremap <C-/><C-/> <Esc>
+noremap <C-\><C-\> <Esc>
+noremap  <Esc>
+noremap <C-/><C-/> <Esc>
+cnoremap <C-\><C-\> <Esc>
+cnoremap  <Esc>
+cnoremap <C-/><C-/> <Esc>
+
+" shortcut for exiting terminal input mode
+tnoremap <C-\><C-\> <C-\><C-n>
+tnoremap  <C-\><C-n>
+tnoremap <C-/><C-/> <C-\><C-n>
+
+" make Shift-Insert paste contents of the clipboard into terminal
+tnoremap <S-Insert> <C-\><C-N>"*pi
+
+" Enable the same behavior to <C-n> and <Down> / <C-p> and <Up> in command mode
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" disable search when redrawing the screen
+nnoremap <silent> <C-l> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><Bar>redraw!<Bar>syntax sync fromstart<CR>
+
+" http://vim.wikia.com/wiki/Prevent_escape_from_moving_the_cursor_one_character_to_the_left
+inoremap <silent> <Esc> <Esc>`^
+
+function! InsertCommentstring()
+	let [l, r] = split(substitute(substitute(&commentstring,'\S\zs%s',' %s',''),'%s\ze\S','%s ',''),'%s',1)
+	let col = col('.')
+	let line = line('.')
+	let g:ics_pos = [line, col + strlen(l)]
+	return l.r
+endfunction
+function! ICSPositionCursor()
+	call cursor(g:ics_pos[0], g:ics_pos[1])
+	unlet g:ics_pos
+endfunction
+inoremap <C-c> <C-r>=InsertCommentstring()<CR><C-o>:call ICSPositionCursor()<CR>
+
 " plugins {{{1
 
 " AutoPairs {{{2
@@ -315,10 +363,19 @@ function! LightLineFugitive()
     return ''
 endfunction
 
+" neoterm {{{2
+let g:neoterm_direct_open_repl=0
+let g:neoterm_open_in_all_tabs=1
+let g:neoterm_autoscroll=1
+let g:neoterm_term_per_tab=1
+let g:neoterm_shell="fish"
+let g:neoterm_autoinsert=1
+let g:neoterm_automap_keys='<F23>'
+
 " rsi {{{2
 let g:rsi_no_meta = 1
 
-" Subversive {{{1
+" Subversive {{{2
 nmap gR <plug>(SubversiveSubstituteToEndOfLine)
 nmap gr <plug>(SubversiveSubstitute)
 nmap grr <plug>(SubversiveSubstituteLine)
