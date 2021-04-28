@@ -318,5 +318,14 @@ endfunction
 " rsi {{{2
 let g:rsi_no_meta = 1
 
+" Subversive {{{1
+nmap gR <plug>(SubversiveSubstituteToEndOfLine)
+nmap gr <plug>(SubversiveSubstitute)
+nmap grr <plug>(SubversiveSubstituteLine)
+
+nmap grs <plug>(SubversiveSubstituteRange)
+xmap grs <plug>(SubversiveSubstituteRange)
+nmap grss <plug>(SubversiveSubstituteWordRange)
+
 " vi {{{1
 " vi: ft=vim:tw=80:sw=4:ts=4:sts=4:et:fdm=marker

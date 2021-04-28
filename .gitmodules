@@ -67,3 +67,6 @@
 [submodule "pack/plugins/start/neoterm"]
 	path = pack/plugins/start/neoterm
 	url = https://github.com/kassio/neoterm.git
+[submodule "pack/plugins/start/subversive"]
+	path = pack/plugins/start/subversive
+	url = https://github.com/svermeulen/vim-subversive.git
