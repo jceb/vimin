@@ -219,6 +219,39 @@ nnoremap <Space>wt <cmd>tabe %<CR>
 nnoremap <Space>wV <cmd>vnew<CR>
 nnoremap <Space>x <cmd>x<CR>
 
+" auto commands {{{1
+
+augroup ft_text
+  au!
+  " au FileType *							setlocal iskeyword+=_
+  au FileType mail,help,debchangelog,tex,plaintex,txt,asciidoc,markdown,org,yaml
+        \ setlocal formatoptions=t iskeyword+=- textwidth=72 complete+=kspell sw=2 ts=2 sts=2
+  au FileType debchangelog,gitcommit,hg	setlocal spell spelllang=en
+  au FileType help,man						setlocal nolist
+augroup END
+
+augroup ft_programming
+  au!
+  au FileType dosbatch					setlocal commentstring=::\ %s
+  au FileType typescript,javascript		setlocal ts=2 sw=2 sts=2
+  au FileType c							setlocal commentstring=/*%s*/
+  au FileType cpp						setlocal commentstring=//%s
+  au FileType vue,svelte				setlocal shiftwidth=2 softtabstop=2 tabstop=2
+  au FileType *							setlocal foldcolumn=1
+augroup END
+
+augroup ft_general
+  au!
+  au BufReadPost,BufNewFile Dockerfile-*	setf dockerfile
+  au BufReadPost,BufNewFile .env*			setf conf
+  au BufReadPost,BufNewFile *.jsonld		setf json
+  au BufReadPost,BufNewFile *.mjs,*.cjs		setf javascript
+  au BufReadPost,BufNewFile *.ts			setf typescript
+  au BufReadPost,BufNewFile *				setlocal cpoptions-=J formatoptions+=rcjnq formatoptions-=o " o is really annoying
+  au FocusGained *							checktime " run checks like autoread as soon as vim regains focus
+  au InsertLeave *							set nopaste " disable paste when leaving insert mode
+augroup END
+
 " keybindings {{{1
 " make S behave like C
 nnoremap S s$
