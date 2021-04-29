@@ -70,3 +70,6 @@
 [submodule "pack/plugins/start/subversive"]
 	path = pack/plugins/start/subversive
 	url = https://github.com/svermeulen/vim-subversive.git
+[submodule "pack/plugins/start/sayonara"]
+	path = pack/plugins/start/sayonara
+	url = https://github.com/mhinz/vim-sayonara.git

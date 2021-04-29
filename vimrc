@@ -149,6 +149,7 @@ nnoremap <Space>7 7<C-w>w
 nnoremap <Space>8 8<C-w>w
 nnoremap <Space>9 9<C-w>w
 nnoremap <Space><Space> <cmd>update<CR>
+nnoremap <Space>bd <cmd>Sayonara!<CR>
 nnoremap <Space>bW <cmd>bw #<CR>
 nnoremap <Space>bw <cmd>bw<CR>
 nnoremap <Space>CM "*P
@@ -157,8 +158,8 @@ nnoremap <Space>cm "*p
 nnoremap <Space>CV "+P
 nnoremap <Space>cV "+P
 nnoremap <Space>cv "+p
-nnoremap <Space>D <cmd>bw<CR>
-nnoremap <Space>d <cmd>bd<CR>
+nnoremap <Space>D <cmd>Sayonara!<CR>
+nnoremap <Space>d <cmd>Sayonara<CR>
 nnoremap <Space>e :<C-u>e %/
 nnoremap <Space>E <cmd>e<CR>
 nnoremap <Space>fc :<C-u>e ~/.config/
