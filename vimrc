@@ -405,6 +405,10 @@ let g:neoterm_term_per_tab=1
 let g:neoterm_autoinsert=1
 let g:neoterm_automap_keys='<F23>'
 
+function! TnewHere()
+    call neoterm#new({ 'cwd': expand('%:h:p') })
+endfunction
+
 " rsi {{{2
 let g:rsi_no_meta = 1
 
