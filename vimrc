@@ -170,7 +170,7 @@ nnoremap <Space>fs <cmd>w<CR>
 nnoremap <Space>fu :<C-u>e ~/
 nnoremap <Space>gB <cmd>Git blame<CR>
 nnoremap <Space>gC <cmd>Git commit -s<CR>
-nnoremap <Space>gc <cmd>Git commit -s<CR>
+nnoremap <Space>gc <cmd>Git commit<CR>
 nnoremap <Space>GD <cmd>Gdiffsplit! HEAD<CR>
 nnoremap <Space>gD <cmd>Gdiffsplit! HEAD<CR>
 nnoremap <Space>gd <cmd>Gdiffsplit!<CR>
