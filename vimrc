@@ -259,24 +259,29 @@ nnoremap S s$
 
 " replace within the visual selection
 xnoremap s :<C-u>%s/\%V
+
 " use the same exit key for vim that's also configured in the terminal
-inoremap <C-\><C-\> <Esc>
-inoremap  <Esc>
-inoremap <C-/><C-/> <Esc>
-noremap <C-\><C-\> <Esc>
-noremap  <Esc>
-noremap <C-/><C-/> <Esc>
-cnoremap <C-\><C-\> <Esc>
 cnoremap  <Esc>
 cnoremap <C-/><C-/> <Esc>
+cnoremap <C-\><C-\> <Esc>
+inoremap  <Esc>
+inoremap <C-/><C-/> <Esc>
+inoremap <C-\><C-\> <Esc>
+noremap  <Esc>
+noremap <C-/><C-/> <Esc>
+noremap <C-\><C-\> <Esc>
 
 " shortcut for exiting terminal input mode
-tnoremap <C-\><C-\> <C-\><C-n>
-tnoremap  <C-\><C-n>
-tnoremap <C-/><C-/> <C-\><C-n>
+if has("nvim")
+    tnoremap <C-\><C-\> <C-\><C-n>
+    tnoremap  <C-\><C-n>
+    tnoremap <C-/><C-/> <C-\><C-n>
+endif
 
 " make Shift-Insert paste contents of the clipboard into terminal
-tnoremap <S-Insert> <C-\><C-N>"*pi
+if has("nvim")
+    tnoremap <S-Insert> <C-\><C-N>"*pi
+endif
 
 " Enable the same behavior to <C-n> and <Down> / <C-p> and <Up> in command mode
 cnoremap <C-p> <Up>
