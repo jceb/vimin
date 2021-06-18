@@ -73,3 +73,6 @@
 [submodule "pack/plugins/start/sayonara"]
 	path = pack/plugins/start/sayonara
 	url = https://github.com/mhinz/vim-sayonara.git
+[submodule "pack/plugins/start/visual-multi"]
+	path = pack/plugins/start/visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
