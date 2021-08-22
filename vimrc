@@ -196,7 +196,6 @@ nnoremap <Space>o <C-w>p<CR>
 nnoremap <Space>pc <cmd>Dirvish ~/.config<CR>
 nnoremap <Space>pp <cmd>pwd<CR>
 nnoremap <Space>pv <cmd>Dirvish ~/.config/nvim<CR>
-nnoremap <Space>qq <cmd>qa<CR>
 nnoremap <Space>R <cmd>e!<CR>
 nnoremap <Space>SS :<C-u>Obsession ~/.sessions/
 nnoremap <Space>ss :<C-u>so ~/.sessions/
@@ -219,6 +218,8 @@ nnoremap <Space>wS <cmd>new<CR>
 nnoremap <Space>wt <cmd>tabe %<CR>
 nnoremap <Space>wV <cmd>vnew<CR>
 nnoremap <Space>x <cmd>x<CR>
+nnoremap <Space>zz <cmd>qa<CR>
+nnoremap <Space>ZZ <cmd>qa!<CR>
 
 " auto commands {{{1
 
