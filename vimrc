@@ -218,8 +218,8 @@ nnoremap <Space>wS <cmd>new<CR>
 nnoremap <Space>wt <cmd>tabe %<CR>
 nnoremap <Space>wV <cmd>vnew<CR>
 nnoremap <Space>x <cmd>x<CR>
-nnoremap <Space>zz <cmd>qa<CR>
-nnoremap <Space>ZZ <cmd>qa!<CR>
+nnoremap <Space>[[ <cmd>qa<CR>
+nnoremap <Space>]] <cmd>qa!<CR>
 
 " auto commands {{{1
 
